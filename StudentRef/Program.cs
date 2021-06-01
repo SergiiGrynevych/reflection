@@ -16,13 +16,15 @@ namespace StudentRef
             MethodInfo method = t.GetMethod("ShowResult");
 
             object result = method.Invoke(obj, new object[] { });
-
+            
+            //result of first object
             Console.WriteLine(result);
 
             object objSecond = Activator.CreateInstance(t, new object[2] { "Kivi", 22 });
 
             object resultSecond = method.Invoke(objSecond, new object[] { });
-            
+
+            //result of second object
             Console.WriteLine(resultSecond);
 
             Console.ReadKey();
